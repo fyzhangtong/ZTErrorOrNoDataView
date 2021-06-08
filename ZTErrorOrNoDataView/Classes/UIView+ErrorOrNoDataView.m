@@ -28,19 +28,14 @@
 {
     return objc_getAssociatedObject(self, _cmd);
 }
-- (void)showNetWorkErrorOrNoDataViewAtPointY:(CGFloat)pointY backImage:(NSString *__nullable)backImage actionButtonTitle:(NSString *__nullable)actionButtonTitle
-                            actionTitleColor:(UIColor *)actionTitleColor
-                             actionTitleFont:(UIFont *)actionTitleFont
-                             actionBackColor:(UIColor *)actionBackColor
-                          actionCornerRadius:(CGFloat)actionCornerRadius actionBlock:(void(^)(void))actionBlock
+- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage buttonConfig:(ZTButtonConfig *)buttonConfig
 {
     if (self.networkErrorOrNoDataView) {
         [self dismissNetworkErrorOrNoDataView];
     }
     UIView *networkErrorOrNoDataView = [[UIView alloc] init];
-    networkErrorOrNoDataView.backgroundColor = [UIColor whiteColor];
+//    networkErrorOrNoDataView.backgroundColor = [UIColor whiteColor];
     CGRect rect = self.bounds;
-    rect.origin.y = pointY;
     networkErrorOrNoDataView.frame = rect;
     
     [self addSubview:networkErrorOrNoDataView];
@@ -51,26 +46,25 @@
         make.centerX.mas_equalTo(networkErrorOrNoDataView.mas_centerX);
         make.top.mas_equalTo(rect.size.height/4.0);
     }];
-    if (actionButtonTitle && actionBlock) {
-        self.networkErrorOrNoDataViewButtonActionBlock = actionBlock;
+    if (buttonConfig) {
+        self.networkErrorOrNoDataViewButtonActionBlock = buttonConfig.action;
         UIButton *actionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         actionButton.layer.masksToBounds = YES;
-        actionButton.layer.cornerRadius = 18.5;
-        actionButton.titleLabel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:13];
-        [actionButton setTitleColor:actionTitleColor forState:UIControlStateNormal];
-        [actionButton setBackgroundColor:actionBackColor];
-        [actionButton setTitle:actionButtonTitle forState:UIControlStateNormal];
+        actionButton.layer.cornerRadius = buttonConfig.cornerRadius;
+        actionButton.titleLabel.font = buttonConfig.titleFont;
+        [actionButton setTitleColor:buttonConfig.titleColor forState:UIControlStateNormal];
+        [actionButton setBackgroundColor:buttonConfig.backColor];
+        [actionButton setTitle:buttonConfig.title forState:UIControlStateNormal];
         [actionButton addTarget:self action:@selector(networkErrorOrNoDataViewButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         [networkErrorOrNoDataView addSubview:actionButton];
         [actionButton mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(backImageView.mas_centerX);
             make.top.mas_equalTo(backImageView.mas_bottom).mas_offset(20);
-            make.height.mas_equalTo(37);
-            make.width.mas_greaterThanOrEqualTo(120);
+            make.size.mas_equalTo(buttonConfig.size);
         }];
     }
     self.networkErrorOrNoDataView = networkErrorOrNoDataView;
-    self.networkErrorOrNoDataViewButtonActionBlock = actionBlock;
+    self.networkErrorOrNoDataViewButtonActionBlock = buttonConfig.action;
 }
 - (void)networkErrorOrNoDataViewButtonAction:(UIButton *)sender
 {

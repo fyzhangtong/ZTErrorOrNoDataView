@@ -11,6 +11,7 @@
 #endif
 
 #import "UIView+ErrorOrNoDataView.h"
+#import "ZTButtonConfig.h"
 
 FOUNDATION_EXPORT double ZTErrorOrNoDataViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZTErrorOrNoDataViewVersionString[];

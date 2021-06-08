@@ -8,16 +8,13 @@
 
 
 #import <UIKit/UIKit.h>
+#import "ZTButtonConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (ErrorOrNoDataView)
 
-- (void)showNetWorkErrorOrNoDataViewAtPointY:(CGFloat)pointY backImage:(NSString *__nullable)backImage actionButtonTitle:(NSString *__nullable)actionButtonTitle
-                            actionTitleColor:(UIColor *)actionTitleColor
-                            actionTitleFont:(UIFont *)actionTitleFont
-                             actionBackColor:(UIColor *)actionBackColor
-                          actionCornerRadius:(CGFloat)actionCornerRadius actionBlock:(void(^)(void))actionBlock;
+- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage buttonConfig:(ZTButtonConfig *)buttonConfig;
 
 - (void)dismissNetworkErrorOrNoDataView;
 @end
