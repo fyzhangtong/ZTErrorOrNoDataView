@@ -28,7 +28,7 @@
 {
     return objc_getAssociatedObject(self, _cmd);
 }
-- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage backgroundColor:(UIColor *)backgroundColor buttonConfig:(ZTButtonConfig *)buttonConfig
+- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage backgroundColor:(UIColor *)backgroundColor buttonConfig:(ZTButtonConfig *_Nullable)buttonConfig
 {
     if (self.networkErrorOrNoDataView) {
         [self dismissNetworkErrorOrNoDataView];

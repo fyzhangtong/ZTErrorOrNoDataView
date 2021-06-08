@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (ErrorOrNoDataView)
 
-- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage backgroundColor:(UIColor *)backgroundColor buttonConfig:(ZTButtonConfig *)buttonConfig;
+- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage backgroundColor:(UIColor *)backgroundColor buttonConfig:(ZTButtonConfig *_Nullable)buttonConfig;
 
 - (void)dismissNetworkErrorOrNoDataView;
 @end

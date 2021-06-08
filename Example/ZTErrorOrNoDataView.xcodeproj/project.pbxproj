@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		290872C0266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 290872BF266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07A362ED89C47AC91A3A3F89 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		07A362ED89C47AC91A3A3F89 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		290872BE266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AusonErrorOrNoDataView.h"; sourceTree = "<group>"; };
+		290872BF266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AusonErrorOrNoDataView.m"; sourceTree = "<group>"; };
 		43D8111D70343E6A597E9AA5 /* Pods-ZTErrorOrNoDataView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTErrorOrNoDataView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZTErrorOrNoDataView_Tests/Pods-ZTErrorOrNoDataView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		44205EB409D538C9A1C8F7E2 /* Pods-ZTErrorOrNoDataView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTErrorOrNoDataView_Example.release.xcconfig"; path = "Target Support Files/Pods-ZTErrorOrNoDataView_Example/Pods-ZTErrorOrNoDataView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5180FF0C47D7D890EB043161 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		5180FF0C47D7D890EB043161 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5D107FD9E02819B5A7135BFF /* Pods_ZTErrorOrNoDataView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZTErrorOrNoDataView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* ZTErrorOrNoDataView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZTErrorOrNoDataView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,7 +64,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		68DEC2EAB64F4936498A0600 /* ZTErrorOrNoDataView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZTErrorOrNoDataView.podspec; path = ../ZTErrorOrNoDataView.podspec; sourceTree = "<group>"; };
+		68DEC2EAB64F4936498A0600 /* ZTErrorOrNoDataView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZTErrorOrNoDataView.podspec; path = ../ZTErrorOrNoDataView.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0006103E61795112D3A80EB /* Pods-ZTErrorOrNoDataView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZTErrorOrNoDataView_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZTErrorOrNoDataView_Tests/Pods-ZTErrorOrNoDataView_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* ZTViewController.h */,
 				6003F5A6195388D20070C39A /* ZTViewController.m */,
+				290872BE266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.h */,
+				290872BF266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -193,7 +198,6 @@
 				43D8111D70343E6A597E9AA5 /* Pods-ZTErrorOrNoDataView_Tests.debug.xcconfig */,
 				A0006103E61795112D3A80EB /* Pods-ZTErrorOrNoDataView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +262,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -367,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* ZTAppDelegate.m in Sources */,
+				290872C0266F6288003B0D97 /* UIView+AusonErrorOrNoDataView.m in Sources */,
 				6003F5A7195388D20070C39A /* ZTViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

@@ -7,7 +7,7 @@
 //
 
 #import "ZTViewController.h"
-#import <ZTErrorOrNoDataView/ZTErrorOrNoDataView-umbrella.h>
+#import "UIView+AusonErrorOrNoDataView.h"
 
 @interface ZTViewController ()
 
@@ -19,10 +19,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    ZTButtonConfig *config = [ZTButtonConfig configWithTitle:@"刷新一下" titleColor:[UIColor whiteColor] titleFont:[UIFont fontWithName:@"PingFangSC-Regular" size:13] backColor:[UIColor blueColor] cornerRadius:4 size:CGSizeMake(90, 28) action:^{
-        NSLog(@"8888888");
-    }];
-    [self.view showErrorOrNoDataViewWithImage:@"network_error" backgroundColor:[UIColor redColor] buttonConfig:config];
+    
+//    [self.view showNetworkErrorWithActionBlock:^{
+//        NSLog(@"***");
+//    }];
+    [self.view showNodataView];
 }
 
 - (void)didReceiveMemoryWarning
