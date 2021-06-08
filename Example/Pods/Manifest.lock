@@ -1,0 +1,23 @@
+PODS:
+  - Masonry (1.1.0)
+  - ZTErrorOrNoDataView (0.1.0):
+    - Masonry
+
+DEPENDENCIES:
+  - ZTErrorOrNoDataView (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+
+EXTERNAL SOURCES:
+  ZTErrorOrNoDataView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ZTErrorOrNoDataView: aa4b4b56785ae26adce5004a0e760a82b01cf767
+
+PODFILE CHECKSUM: 65270d7ea77f8c302ceba574b1330005228a6aa1
+
+COCOAPODS: 1.10.1

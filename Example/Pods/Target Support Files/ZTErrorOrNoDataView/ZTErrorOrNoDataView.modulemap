@@ -1,0 +1,6 @@
+framework module ZTErrorOrNoDataView {
+  umbrella header "ZTErrorOrNoDataView-umbrella.h"
+
+  export *
+  module * { export * }
+}
