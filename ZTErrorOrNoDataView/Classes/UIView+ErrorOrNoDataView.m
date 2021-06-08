@@ -35,8 +35,7 @@
     }
     UIView *networkErrorOrNoDataView = [[UIView alloc] init];
     networkErrorOrNoDataView.backgroundColor = backgroundColor;
-    CGRect rect = self.bounds;
-    networkErrorOrNoDataView.frame = rect;
+    networkErrorOrNoDataView.frame = CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height);
     
     [self addSubview:networkErrorOrNoDataView];
     UIImageView *backImageView = [UIImageView new];
