@@ -22,7 +22,7 @@
     ZTButtonConfig *config = [ZTButtonConfig configWithTitle:@"刷新一下" titleColor:[UIColor whiteColor] titleFont:[UIFont fontWithName:@"PingFangSC-Regular" size:13] backColor:[UIColor blueColor] cornerRadius:4 size:CGSizeMake(90, 28) action:^{
         NSLog(@"8888888");
     }];
-    [self.view showErrorOrNoDataViewWithImage:@"network_error" buttonConfig:config];
+    [self.view showErrorOrNoDataViewWithImage:@"network_error" backgroundColor:[UIColor redColor] buttonConfig:config];
 }
 
 - (void)didReceiveMemoryWarning

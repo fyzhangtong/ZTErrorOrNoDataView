@@ -28,13 +28,13 @@
 {
     return objc_getAssociatedObject(self, _cmd);
 }
-- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage buttonConfig:(ZTButtonConfig *)buttonConfig
+- (void)showErrorOrNoDataViewWithImage:(NSString *)backImage backgroundColor:(UIColor *)backgroundColor buttonConfig:(ZTButtonConfig *)buttonConfig
 {
     if (self.networkErrorOrNoDataView) {
         [self dismissNetworkErrorOrNoDataView];
     }
     UIView *networkErrorOrNoDataView = [[UIView alloc] init];
-//    networkErrorOrNoDataView.backgroundColor = [UIColor whiteColor];
+    networkErrorOrNoDataView.backgroundColor = backgroundColor;
     CGRect rect = self.bounds;
     networkErrorOrNoDataView.frame = rect;
     
@@ -44,7 +44,7 @@
     [networkErrorOrNoDataView addSubview:backImageView];
     [backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(networkErrorOrNoDataView.mas_centerX);
-        make.top.mas_equalTo(rect.size.height/4.0);
+        make.centerY.mas_equalTo(0).mas_offset(-80);
     }];
     if (buttonConfig) {
         self.networkErrorOrNoDataViewButtonActionBlock = buttonConfig.action;
